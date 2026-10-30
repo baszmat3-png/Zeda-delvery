@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>(نسخة تجريبية) شركة الزهيري للتوصيل</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--a:#0f2a5e;--b:#1d4f9c;--card:#fff;--ink:#1c5d99;--red:#ef4444}
+body.client{--a:#37b9c8;--b:#2d84c4}
+*{box-sizing:border-box}body{margin:0;font-family:Cairo,Tahoma,sans-serif;background:linear-gradient(160deg,var(--a),var(--b));min-height:100vh;color:#fff}
+#app{max-width:520px;margin:auto;min-height:100vh;position:relative;overflow-x:hidden}
+.top{display:flex;align-items:center;justify-content:center;height:60px;position:relative;font-weight:700;font-size:20px;background:rgba(0,0,0,.15)}
+.top .m{position:absolute;right:14px;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}.top .bk{right:auto;left:14px}
+.logo{width:150px;height:150px;border-radius:50%;background:#fff;margin:40px auto 24px;display:flex;align-items:center;justify-content:center;color:#12306b;font-weight:700;text-align:center;padding:14px;font-size:15px}
+.seg{display:flex;background:rgba(0,0,0,.25);border-radius:30px;padding:5px;margin:0 24px 18px}.seg button{flex:1;border:0;border-radius:26px;padding:12px;font:600 17px Cairo;background:none;color:#fff;cursor:pointer}.seg .on{background:#fff;color:#111}
+.box{background:#fff;color:#333;border-radius:18px;margin:0 20px;padding:6px 18px;box-shadow:0 6px 20px #0003}
+.box input,.box select,.box textarea{width:100%;border:0;border-bottom:1px solid #ddd;padding:18px 4px;font:16px Cairo;outline:0;background:none;direction:rtl}
+.btn{display:block;margin:18px auto;min-width:200px;border:0;border-radius:14px;padding:13px 24px;font:700 18px Cairo;color:#fff;background:linear-gradient(90deg,#ef5350,#3d7fc4);cursor:pointer;box-shadow:0 4px 14px #0004}
+.btn.s{display:inline-block;margin:4px;min-width:0;font-size:14px;padding:8px 14px}
+.card{background:#fff;color:var(--ink);border-radius:22px;margin:16px;padding:16px 18px;box-shadow:0 6px 20px #0003}
+.card.dk{background:#4a4a5a}.card h3{margin:0;text-align:center;font-size:20px}.card .c{text-align:center;font-weight:600;border-bottom:1px solid #ddd;padding-bottom:10px;margin-bottom:6px}
+.row{display:flex;align-items:center;gap:14px;padding:9px 0}.row i{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:22px;flex:none}
+.row b{color:var(--red);display:block}.row span{color:var(--ink);font-size:18px}
+.tabs{display:flex;overflow-x:auto;border-bottom:2px solid #fff6;white-space:nowrap}.tabs button{border:0;background:none;color:#fff;padding:14px 18px;font:600 16px Cairo;cursor:pointer;border-radius:14px 14px 0 0}.tabs .on{background:#fff;color:#12306b}
+.rc{border-radius:22px;margin:14px;padding:14px 18px;line-height:2;position:relative;box-shadow:0 6px 18px #0004}
+.s-pending{background:#6b7280}.s-progress{background:#1d4ed8}.s-delivered{background:#16a34a}.s-postponed{background:#d97706}.s-rejected{background:#f00}.s-arrived{background:#0891b2}
+.rc .tag{position:absolute;left:16px;top:70px;font-weight:700}
+.drawer{position:fixed;inset:0;background:linear-gradient(160deg,var(--a),var(--b));z-index:5;display:none;padding:30px 24px;max-width:520px;margin:auto}.drawer.open{display:block}
+.drawer a{display:flex;gap:16px;align-items:center;padding:15px 8px;font-size:19px;font-weight:600;border-bottom:1px solid #fff2;color:#fff;text-decoration:none;cursor:pointer}
+.prof{display:flex;align-items:center;gap:14px;border-bottom:1px solid #fff4;padding-bottom:16px;margin-bottom:8px;font-size:20px}.prof .logo{margin:0;width:70px;height:70px;font-size:9px;padding:6px}
+.info{background:#fff;color:#333;margin:14px;border-radius:22px;padding:14px 20px;line-height:2.1}.info h4{color:var(--ink);font-size:20px;text-align:center;margin:8px}.info p{margin:0}.info em{color:var(--red);font-style:normal}
+.empty{text-align:center;margin-top:30vh;font-weight:700;font-size:19px}.err{color:#fecaca;text-align:center;min-height:22px}.pad{padding:0 16px}
+.tw{overflow:auto;background:#fff;color:#333;margin:14px;border-radius:16px}table{width:100%;border-collapse:collapse}td,th{padding:10px;border-bottom:1px solid #eee;font-size:14px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px}.st{background:#fff;color:#333;border-radius:16px;padding:14px;text-align:center}.st b{display:block;font-size:24px;color:var(--ink)}
+.bar{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:14px}.bar i{display:block;height:14px;border-radius:8px;background:var(--b);min-width:4px}.bar span{width:90px;flex:none}
+.col{display:flex;align-items:flex-end;gap:8px;height:120px}.col div{flex:1;text-align:center;font-size:11px}.col i{display:block;background:var(--b);border-radius:6px 6px 0 0;margin-bottom:3px}
+.demo{margin:18px 20px;text-align:center}.demo small{display:block;margin-bottom:8px;opacity:.85}.demo button{margin:3px;border:1px solid #fff8;background:#fff2;color:#fff;border-radius:20px;padding:8px 14px;font:600 14px Cairo;cursor:pointer}
+.sel{background:#fff;color:#333;border:0;border-radius:12px;padding:10px;font:15px Cairo;margin:4px}</style></head><body><div id="app"></div>
+<script>(function(){
+const store={get:()=>{try{return localStorage.zdb}catch(e){}},set:v=>{try{localStorage.zdb=v}catch(e){}}};
+const crypto={randomBytes:()=>({toString:()=>'x'}),scryptSync:(p)=>({toString:()=>p})};
+const fs={existsSync:()=>!!store.get(),readFileSync:()=>store.get(),writeFileSync:(f,d)=>store.set(d)};
+const path={join:()=>'x'},DB='x',process={env:{}},__dirname='';
+const hash=(p,s=crypto.randomBytes(8).toString('hex'))=>s+':'+crypto.scryptSync(p,s,32).toString('hex');
+const check=(p,h)=>hash(p,h.split(':')[0])===h;
+let db;
+function save(){fs.writeFileSync(DB,JSON.stringify(db))}
+if(fs.existsSync(DB))db=JSON.parse(fs.readFileSync(DB));else{
+ db={seq:10,company:{name:'شركة الزهيري للتوصيل السريع',en:'Al-Zuhairi Express Delivery Company',color:'#12306b'},
+ users:[
+  {id:1,username:'admin',pass:hash('admin123'),name:'المدير',role:'admin'},
+  {id:2,username:'rep',pass:hash('rep123'),name:'apple',role:'rep'},
+  {id:3,username:'driver',pass:hash('driver123'),name:'حسين',role:'driver',phone:'07701234567',repId:2},
+  {id:4,username:'client',pass:hash('client123'),name:'هيثم',role:'client',phone:'07712345678'}],
+ receipts:[{id:1,no:'1',date:'2020/02/20',clientId:4,name:'هيثم',phone:'07712345678',goods:'حاسبة',qty:22,gov:'أربيل',area:'',total:25000,fee:8000,notes:'',status:'rejected',driverId:3,archived:false,updated:'2020/02/20 01:06:34 PM',log:[]}],
+ vouchers:[],notes:[]};save()}
+
+const GV=['بغداد','أربيل','البصرة','نينوى','النجف','كربلاء','السليمانية','دهوك','كركوك','الأنبار'];
+function seedDemo(){
+ const mk=(username,name,role,extra={})=>{const u={id:++db.seq,username,pass:hash(username+'123'),name,role,phone:'07'+(701000000+db.seq*7919%99999999),...extra};db.users.push(u);return u};
+ const rep=db.users.find(u=>u.role==='rep'),ds=[db.users.find(u=>u.id===3),mk('driver2','كرار','driver',{repId:rep.id}),mk('driver3','مصطفى','driver',{repId:rep.id}),mk('driver4','يوسف','driver',{repId:rep.id})];
+ const cs=[db.users.find(u=>u.id===4),mk('client2','متجر النخيل','client'),mk('client3','صيدلية الأمل','client'),mk('client4','معرض الرافدين','client')];
+ const SS=['delivered','delivered','progress','pending','delivered','postponed','rejected','arrived','delivered','progress'],GO=['حاسبة','ملابس','أدوية','إكسسوارات','أجهزة منزلية','هاتف','عطور'];
+ for(let i=0;i<40;i++){const d=new Date(Date.now()-(i%14)*864e5),c=cs[i%4],st=SS[i%10];
+  db.receipts.push({id:++db.seq,no:String(100+i),date:d.toISOString().slice(0,10).replace(/-/g,'/'),clientId:c.id,name:['علي','زينب','حسن','نور','عمر','ليلى'][i%6],phone:'0770'+String(1000000+i*48271%8999999),goods:GO[i%7],qty:1+i%5,gov:GV[i%10],area:['الكرادة','المنصور','عنكاوا','العشار','الجادرية'][i%5],total:5000+(i*3750%45000)-(i*3750%45000)%250,fee:[3000,4000,5000,8000][i%4],notes:'',status:st,driverId:st==='pending'?null:ds[i%4].id,archived:st==='delivered'&&i>24,updated:d.toLocaleString('en-GB',{hour12:false}).replace(',',''),log:[]})}
+ [[cs[0],25000],[cs[1],40000],[cs[2],15000],[ds[1],10000],[ds[2],7500]].forEach(([u,a],i)=>db.vouchers.push({id:++db.seq,userId:u.id,amount:a,note:'سند تجريبي '+(i+1),date:now(),archived:false}));
+ [2,1,4,4].forEach((id,i)=>notify(id,['وصل جديد بانتظار التأكيد','تم تسليم الوصل 100','تم تحديث حالة وصل','سند جديد بمبلغ 25000'][i]));
+ db.seeded=1;save()}
+const pr=u=>u;
+const ST={pending:'غير مؤكد',progress:'قيد التنفيذ',delivered:'تم التسليم',postponed:'مؤجل',rejected:'رفض',arrived:'واصل'};
+const now=()=>new Date().toLocaleString('en-GB',{hour12:false}).replace(',','');
+const sign=u=>'tok'+u.id;
+function auth(req){const t=(req.headers.authorization||'').slice(7);return t.startsWith('tok')?db.users.find(u=>u.id===+t.slice(3)):undefined}
+const pub=u=>{const{pass,...r}=u;return r};
+const notify=(to,text)=>db.notes.unshift({id:++db.seq,to,text,date:now()});
+if(!db.seeded)seedDemo();
+function visible(u){const r=db.receipts;
+ if(u.role==='admin'||u.role==='rep')return r;
+ if(u.role==='client')return r.filter(x=>x.clientId===u.id);
+ return r.filter(x=>x.driverId===u.id)}
+function sum(list,vs){const d=list.filter(x=>x.status==='delivered'),t=d.reduce((a,x)=>a+x.total,0),f=d.reduce((a,x)=>a+x.fee,0),v=vs.reduce((a,x)=>a+x.amount,0);
+ return{count:list.length,total:t,fee:f,net:t-f,vouchers:v,final:t-f-v}}
+const routes=[];const R=(m,p,fn)=>routes.push([m,new RegExp('^'+p+'$'),fn]);
+R('POST','/api/login',(q,b)=>{const u=db.users.find(x=>x.username===b.username);if(!u||!check(b.password||'',u.pass))throw[401,'اسم المستخدم أو كلمة المرور غير صحيحة'];return{token:sign(u),user:pub(u),company:db.company}});
+R('POST','/api/track',(q,b)=>{const r=db.receipts.find(x=>String(x.no)===String(b.no).trim()&&x.phone===String(b.phone).trim());if(!r)throw[404,'لا يوجد وصل بهذه المعلومات'];
+ const d=db.users.find(u=>u.id===r.driverId);return{no:r.no,status:r.status,gov:r.gov,area:r.area,updated:r.updated,driver:d&&d.name}});
+
+R('POST','/api/demo',(q,b)=>{if(process.env.DEMO==='0')throw[403,'الدخول التجريبي معطل'];const u=db.users.find(x=>x.username===({admin:'admin',rep:'rep',driver:'driver',client:'client'})[b.role]);if(!u)throw[404,'غير موجود'];return{token:sign(u),user:pub(u),company:db.company}});
+R('GET','/api/stats',(q,b,u)=>{if(u.role!=='admin')throw[403,'غير مسموح'];const r=db.receipts,by={},gv={},days={},cl={},dv={};
+ r.forEach(x=>{by[x.status]=(by[x.status]||0)+1;gv[x.gov]=(gv[x.gov]||0)+1;days[x.date]=(days[x.date]||0)+1;
+  if(x.status==='delivered'){const c=db.users.find(y=>y.id===x.clientId);if(c)cl[c.name]=(cl[c.name]||0)+x.total;const d=db.users.find(y=>y.id===x.driverId);if(d)dv[d.name]=(dv[d.name]||0)+1}});
+ const top=o=>Object.entries(o).sort((a,b)=>b[1]-a[1]).slice(0,5);const last7=[...Array(7)].map((_,i)=>{const k=new Date(Date.now()-(6-i)*864e5).toISOString().slice(0,10).replace(/-/g,'/');return[k.slice(5),days[k]||0]});
+ return{...sum(r,db.vouchers),orders:r.length,users:db.users.length,clients:db.users.filter(x=>x.role==='client').length,drivers:db.users.filter(x=>x.role==='driver').length,by,gov:top(gv),days:last7,clients_top:top(cl),drivers_top:top(dv),unconfirmed:by.pending||0}});
+R('PUT','/api/users/(\\d+)',(q,b,u)=>{if(u.role!=='admin')throw[403,'غير مسموح'];const x=db.users.find(y=>y.id==q[1]);if(!x)throw[404,'غير موجود'];
+ if(b.name)x.name=b.name;if(b.phone!==undefined)x.phone=b.phone;if(b.role&&q[1]!=u.id)x.role=b.role;if(b.password)x.pass=hash(b.password);save();return pub(x)});
+R('DELETE','/api/receipts/(\\d+)',(q,b,u)=>{if(u.role!=='admin')throw[403,'غير مسموح'];db.receipts=db.receipts.filter(x=>x.id!=q[1]);save();return{ok:1}});
+R('PUT','/api/receipts/(\\d+)',(q,b,u)=>{if(u.role!=='admin')throw[403,'غير مسموح'];const r=db.receipts.find(x=>x.id==q[1]);if(!r)throw[404,'غير موجود'];
+ for(const k of['name','phone','goods','gov','area','notes'])if(b[k]!==undefined)r[k]=b[k];for(const k of['total','fee','qty'])if(b[k]!==undefined)r[k]=+b[k];r.updated=now();save();return r});
+R('DELETE','/api/vouchers/(\\d+)',(q,b,u)=>{if(u.role!=='admin')throw[403,'غير مسموح'];db.vouchers=db.vouchers.filter(x=>x.id!=q[1]);save();return{ok:1}});
+R('GET','/api/company',()=>db.company);
+R('GET','/api/summary',(q,b,u)=>{const L=visible(u),vs=db.vouchers.filter(v=>u.role==='admin'||v.userId===u.id);
+ return{current:sum(L.filter(x=>!x.archived),vs.filter(v=>!v.archived)),all:sum(L,vs)}});
+R('GET','/api/receipts',(q,b,u,url)=>{const s=url.searchParams.get('status'),a=url.searchParams.get('archived')==='1',k=url.searchParams.get('q');
+ return visible(u).filter(x=>(s?x.status===s:true)&&x.archived===a&&(!k||[x.no,x.name,x.phone,x.gov].join(' ').includes(k))).reverse()});
+R('GET','/api/receipts/(\\d+)',(q,b,u)=>{const r=visible(u).find(x=>x.id==q[1]);if(!r)throw[404,'غير موجود'];
+ const d=db.users.find(x=>x.id===r.driverId);return{...r,driver:d&&{name:d.name,phone:d.phone}}});
+R('POST','/api/receipts',(q,b,u)=>{if(!['client','admin'].includes(u.role))throw[403,'غير مسموح'];
+ for(const k of['no','name','phone','gov','goods','total'])if(!b[k])throw[400,'املأ الحقول المطلوبة'];
+ const clientId=u.role==='client'?u.id:+b.clientId||u.id;
+ if(db.receipts.some(x=>x.no==b.no&&x.clientId===clientId))throw[400,'رقم الوصل مكرر'];
+ const r={id:++db.seq,no:String(b.no),date:new Date().toISOString().slice(0,10).replace(/-/g,'/'),clientId,name:b.name,phone:b.phone,goods:b.goods,qty:+b.qty||1,gov:b.gov,area:b.area||'',total:+b.total,fee:+b.fee||0,notes:b.notes||'',status:'pending',driverId:null,archived:false,updated:now(),log:[]};
+ db.receipts.push(r);db.users.filter(x=>x.role==='admin'||x.role==='rep').forEach(x=>notify(x.id,'وصل جديد رقم '+r.no+' بانتظار التأكيد'));save();return r});
+R('POST','/api/receipts/(\\d+)/status',(q,b,u)=>{if(u.role==='client')throw[403,'غير مسموح'];const r=visible(u).find(x=>x.id==q[1]);if(!r||!ST[b.status])throw[404,'غير موجود'];
+ if(b.driverId)r.driverId=+b.driverId;r.status=b.status;if(b.notes)r.notes=b.notes;r.updated=now();r.log.push({by:u.name,s:b.status,t:r.updated});
+ notify(r.clientId,'الوصل '+r.no+': '+ST[b.status]);save();return r});
+R('POST','/api/receipts/(\\d+)/archive',(q,b,u)=>{const r=visible(u).find(x=>x.id==q[1]);if(!r||u.role==='client')throw[403,'غير مسموح'];r.archived=true;save();return r});
+R('GET','/api/users',(q,b,u)=>{if(u.role==='client'||u.role==='driver')throw[403,'غير مسموح'];return db.users.filter(x=>u.role==='admin'||x.repId===u.id).map(pub)});
+R('POST','/api/users',(q,b,u)=>{if(!['admin','rep'].includes(u.role))throw[403,'غير مسموح'];
+ if(!b.username||!b.password||!b.name)throw[400,'املأ الحقول'];if(db.users.some(x=>x.username===b.username))throw[400,'اسم المستخدم موجود'];
+ const role=u.role==='rep'?'driver':(['rep','driver','client','admin'].includes(b.role)?b.role:'client');
+ const n={id:++db.seq,username:b.username,pass:hash(b.password),name:b.name,role,phone:b.phone||'',repId:u.role==='rep'?u.id:+b.repId||undefined};db.users.push(n);save();return pub(n)});
+R('DELETE','/api/users/(\\d+)',(q,b,u)=>{if(u.role!=='admin')throw[403,'غير مسموح'];if(q[1]==u.id)throw[400,'لا يمكن حذف نفسك'];db.users=db.users.filter(x=>x.id!=q[1]);save();return{ok:1}});
+R('GET','/api/vouchers',(q,b,u)=>db.vouchers.filter(v=>u.role==='admin'||v.userId===u.id).reverse());
+R('POST','/api/vouchers',(q,b,u)=>{if(u.role!=='admin')throw[403,'غير مسموح'];if(!+b.amount||!b.userId)throw[400,'أدخل المبلغ والمستخدم'];
+ const v={id:++db.seq,userId:+b.userId,amount:+b.amount,note:b.note||'',date:now(),archived:false};db.vouchers.push(v);notify(v.userId,'سند جديد بمبلغ '+v.amount);save();return v});
+R('GET','/api/notifications',(q,b,u)=>db.notes.filter(n=>n.to===u.id).slice(0,100));
+R('POST','/api/password',(q,b,u)=>{if(!check(b.old||'',u.pass))throw[400,'كلمة المرور الحالية خاطئة'];if((b.pass||'').length<4)throw[400,'كلمة المرور قصيرة'];u.pass=hash(b.pass);save();return{ok:1}});
+R('POST','/api/company',(q,b,u)=>{if(u.role!=='admin')throw[403,'غير مسموح'];Object.assign(db.company,{name:b.name||db.company.name,en:b.en||db.company.en,color:b.color||db.company.color});save();return db.company});
+
+window.fetch=async(u,o={})=>{const url=new URL(u,'http://x');let b={};try{b=o.body?JSON.parse(o.body):{}}catch(e){}
+ const req={headers:{authorization:(o.headers||{}).Authorization||''}};
+ const out=(c,j)=>({ok:c<400,status:c,json:async()=>j});
+ try{for(const[m,re,fn]of routes){const q=re.exec(url.pathname);if(m===(o.method||'GET')&&q){
+  const open=['/api/login','/api/track','/api/company','/api/demo'].includes(url.pathname)&&!(m==='POST'&&url.pathname==='/api/company');
+  const us=auth(req);if(!open&&!us)return out(401,{error:'سجّل الدخول'});return out(200,fn(q,b,us,url))}}
+  return out(404,{error:'غير موجود'})}catch(e){return Array.isArray(e)?out(e[0],{error:e[1]}):out(500,{error:'خطأ'})}};
+})();
+</script>
+<script>
+const $=s=>document.querySelector(s),ST={pending:'غير مؤكد',progress:'قيد التنفيذ',delivered:'تم التسليم',postponed:'مؤجل',rejected:'رفض',arrived:'واصل'};
+const ROLE={admin:'مدير',rep:'مندوب',driver:'سائق',client:'عميل'},GOVS=['بغداد','أربيل','البصرة','نينوى','النجف','كربلاء','السليمانية','دهوك','كركوك','الأنبار','ديالى','صلاح الدين','بابل','واسط','ذي قار','ميسان','المثنى','القادسية','حلبجة'];
+let S={user:JSON.parse(localStorage.u||'null'),tok:localStorage.t||'',co:{name:'شركة الزهيري للتوصيل السريع',en:'Al-Zuhairi Express Delivery Company'},tab:'user'};
+const n=x=>Number(x).toLocaleString('en-US');
+async function api(p,m='GET',b){const r=await fetch('/api/'+p,{method:m,headers:{'Content-Type':'application/json',Authorization:'Bearer '+S.tok},body:b?JSON.stringify(b):undefined});const j=await r.json();if(r.status===401&&S.user){out();}if(!r.ok)throw j.error||'خطأ';return j}
+function out(){localStorage.clear();S.user=null;S.tok='';go('')}
+function go(h){location.hash=h;render()}
+function menu(){const r=S.user.role,M=[['','🏠','الرئيسية'],['notes','🔔','الإشعارات'],['search','🔍','البحث']];
+ if(r==='client'||r==='admin')M.push(['add','➕','اضافة وصل']);if(r==='client')M.push(['pending','📄','غير مؤكد']);
+ if(r==='admin')M.splice(1,0,['orders','📦','كل الوصولات'],['vouchers','💲','السندات']);M.push(['list','📑','الوصولات'],['archive','🗄️','الارشيف']);if(r==='rep'||r==='driver')M.push(['vouchers','💲','السندات']);
+ if(r==='admin'||r==='rep')M.push(['users','🚗',r==='rep'?'السواق':'المستخدمون']);M.push(['settings','⚙️','الاعدادات'],['about','ℹ️','حول']);return M}
+function shell(title,body,back){return `<div class="top"><button class="m ${back?'bk':''}" onclick="${back?'history.back()':'$(\'.drawer\').classList.add(\'open\')'}">${back?'‹':'☰'}</button>${title}</div>${body}
+<div class="drawer" onclick="if(event.target.tagName!=='DIV'||event.target.className.includes('drawer'))this.classList.remove('open')"><div class="prof"><div class="logo">${S.co.en}</div><div>${S.user.name}<br>${ROLE[S.user.role]}</div></div>
+${menu().map(m=>`<a onclick="go('${m[0]}')"><span>${m[1]}</span>${m[2]}</a>`).join('')}<a onclick="out()"><span>🚪</span>تسجيل خروج</a></div>`}
+const rows=(c,items)=>items.map(([l,v,bg,ic])=>`<div class="row"><i style="background:${bg}">${ic}</i><div><b>${l}</b><span>${v}</span></div></div>`).join('');
+function acct(t,a,cl){const I=[['المبلغ الكلي',n(a.total),'#eef','💵'],['اجرة التوصيل',n(a.fee),'#fee','⇄'],['المبلغ الصافي',n(a.net),'#efe','🏛️']];
+ if(!cl)I.push(['السندات',n(a.vouchers),'#efe','💳'],['المبلغ النهائي',n(a.final),'#efe','💰']);
+ return `<div class="card ${t==='الحساب الكلي'?'dk':''}"><div class="c"><h3>${t}</h3>عدد الوصولات : ${a.count}</div>${rows(0,I)}</div>`}
+function card(r){return `<div class="rc s-${r.status}"><div>رقم الوصل : ${r.no}</div><div>هاتف المستلم : ${r.phone}</div><div>المحافظة : ${r.gov}</div><div>المنطقة : ${r.area||''}</div><div>المبلغ الكلي : ${n(r.total)}</div><div>اخر تحديث : ${r.updated}</div><div class="tag">${ST[r.status]}</div><button class="btn s" style="width:70%;display:block;margin:8px auto" onclick="go('r/${r.id}')">عرض التفاصيل</button></div>`}
+const bars=(a,f=n)=>{const m=Math.max(1,...a.map(x=>x[1]));return a.map(x=>`<div class="bar"><span>${x[0]}</span><i style="width:${x[1]/m*55}%"></i>${f(x[1])}</div>`).join('')};
+const V={
+async '' (){if(S.user.role==='admin')return dash();const s=await api('summary'),c=S.user.role==='client';return shell('الرئيسية',(c?`<div class="pad" style="display:flex;gap:10px;margin-top:14px"><button class="btn s" style="flex:1" onclick="go('statement')">كشف حساب</button><button class="btn s" style="flex:1" onclick="go('returns')">كشف مرتجعات</button></div>`:'')+acct('الحساب الحالي',s.current,c)+acct('الحساب الكلي',s.all,c))},
+async list(){const q=new URLSearchParams(location.hash.split('?')[1]||'');const st=q.get('s')||'progress',l=await api('receipts?status='+st);
+ return shell('الوصولات',`<div class="tabs">${Object.keys(ST).filter(k=>k!=='pending').map(k=>`<button class="${k===st?'on':''}" onclick="go('list?s=${k}')">${ST[k]}</button>`).join('')}</div>`+(l.length?l.map(card).join(''):'<div class="empty">لا توجد وصولات</div>'))},
+async pending(){const l=await api('receipts?status=pending');return shell('غير مؤكد',l.length?l.map(card).join(''):'<div class="empty">لا توجد وصولات</div>')},
+async archive(){const l=await api('receipts?archived=1');return shell('الارشيف',l.length?l.map(card).join(''):'<div class="empty">الارشيف فارغ</div>')},
+async search(){return shell('البحث',`<div class="box" style="margin-top:20px"><input id="q" placeholder="رقم الوصل أو الهاتف أو الاسم"></div><button class="btn" onclick="doSearch()">بحث</button><div id="res"></div>`)},
+async add(){return shell('اضافة وصل',`<div class="box" style="margin:16px">${[['no','رقم الوصل'],['name','اسم الزبون'],['phone','هاتف الزبون'],['area','المنطقة'],['goods','نوع البضاعة'],['qty','عدد القطع','number'],['total','المبلغ الكلي','number'],['fee','اجرة التوصيل','number']].map(f=>`<input id="f_${f[0]}" type="${f[2]||'text'}" placeholder="${f[1]}">`).join('').replace('<input id="f_area"',`<select id="f_gov">${GOVS.map(g=>`<option>${g}</option>`).join('')}</select><input id="f_area"`)}<textarea id="f_notes" placeholder="الملاحظات"></textarea></div><div class="err" id="e"></div><button class="btn" onclick="addR()">حفظ الوصل</button>`)},
+async 'r'(id){const r=await api('receipts/'+id),u=S.user,can=u.role!=='client';let dr=[];if(can&&u.role!=='driver')try{dr=(await api('users')).filter(x=>x.role==='driver')}catch{}
+ return shell(r.no,`<div class="info"><h4>معلومات الوصل</h4>${[['رقم الوصل',r.no],['تاريخ الاضافة',r.date],['اسم المستلم',r.name],['هاتف المستلم',r.phone],['نوع البضاعة',r.goods],['عدد القطع',r.qty],['المحافظة',r.gov],['المنطقة',r.area||''],['المبلغ الكلي',n(r.total)],['اجرة التوصيل',n(r.fee)],['المبلغ الصافي',n(r.total-r.fee)],['الملاحظات',r.notes||''],['الحالة',ST[r.status]],['اخر تحديث',r.updated]].map(x=>`<p>${x[0]} : <em>${x[1]}</em></p>`).join('')}<h4>معلومات السائق</h4><p>اسم السائق : <em>${r.driver?r.driver.name:'—'}</em></p><p>هاتف السائق : <em>${r.driver?r.driver.phone:'—'}</em></p></div>`+
+ (can?`<div class="box" style="margin:14px">${dr.length?`<select id="dr"><option value="">اختر السائق</option>${dr.map(d=>`<option value="${d.id}" ${d.id===r.driverId?'selected':''}>${d.name}</option>`).join('')}</select>`:''}<select id="ns">${Object.keys(ST).map(k=>`<option value="${k}" ${k===r.status?'selected':''}>${ST[k]}</option>`).join('')}</select><input id="nn" placeholder="ملاحظة"></div><button class="btn" onclick="setS(${r.id})">تحديث الحالة</button>${['delivered','rejected'].includes(r.status)&&!r.archived?`<button class="btn" onclick="arch(${r.id})">نقل للأرشيف</button>`:''}`:''),1)},
+async notes(){const l=await api('notifications');return shell('الإشعارات',l.length?l.map(x=>`<div class="info" style="padding:8px 18px">${x.text}<br><small style="color:#888">${x.date}</small></div>`).join(''):'<div class="empty">لا توجد إشعارات</div>')},
+async vouchers(){const l=await api('vouchers'),us=S.user.role==='admin'?await api('users'):[];return shell('السندات',(S.user.role==='admin'?`<div class="box" style="margin:14px"><select id="vu">${us.filter(u=>u.role!=='admin').map(u=>`<option value="${u.id}">${u.name} (${ROLE[u.role]})</option>`)}</select><input id="va" type="number" placeholder="المبلغ"><input id="vn" placeholder="ملاحظة"></div><button class="btn" onclick="addV()">اضافة سند</button>`:'')+(l.length?`<div class="tw"><table><tr><th>التاريخ</th><th>المبلغ</th><th>ملاحظة</th>${S.user.role==='admin'?'<th>المستخدم</th><th></th>':''}</tr>${l.map(v=>`<tr><td>${v.date}</td><td>${n(v.amount)}</td><td>${v.note}</td>${S.user.role==='admin'?`<td>${(us.find(u=>u.id===v.userId)||{}).name||''}</td><td><a onclick="delV(${v.id})" style="color:red;cursor:pointer">حذف</a></td>`:''}</tr>`).join('')}</table></div>`:'<div class="empty">لا توجد سندات</div>'))},
+async users(){const l=await api('users'),a=S.user.role==='admin';return shell(a?'المستخدمون':'السواق',`<div class="box" style="margin:14px"><input id="un" placeholder="الاسم"><input id="uu" placeholder="اسم المستخدم"><input id="up" placeholder="كلمة المرور"><input id="uh" placeholder="الهاتف">${a?`<select id="ur">${Object.entries(ROLE).map(([k,v])=>`<option value="${k}">${v}</option>`)}</select>`:''}</div><div class="err" id="e"></div><button class="btn" onclick="addU()">اضافة</button><div class="tw"><table><tr><th>الاسم</th><th>المستخدم</th><th>الدور</th>${a?'<th></th>':''}</tr>${l.map(u=>`<tr><td>${u.name}</td><td>${u.username}</td><td>${ROLE[u.role]}</td>${a?`<td style="white-space:nowrap"><a onclick="editU(${u.id},'${u.name}')" style="cursor:pointer">تعديل</a> | <a onclick="delU(${u.id})" style="color:red;cursor:pointer">حذف</a></td>`:''}</tr>`).join('')}</table></div>`)},
+async settings(){return shell('الاعدادات',`<div class="box" style="margin:14px"><input id="po" type="password" placeholder="كلمة المرور الحالية"><input id="pn" type="password" placeholder="كلمة المرور الجديدة"></div><div class="err" id="e"></div><button class="btn" onclick="chPw()">تغيير كلمة المرور</button>`+(S.user.role==='admin'?`<div class="box" style="margin:14px"><input id="cn" value="${S.co.name}" placeholder="اسم الشركة"><input id="ce" value="${S.co.en}" placeholder="Company name"></div><button class="btn" onclick="saveCo()">حفظ بيانات الشركة</button>`:''))},
+async about(){return shell('حول',`<div class="info"><h4>${S.co.name}</h4><p style="text-align:center">${S.co.en}</p><p style="text-align:center">نظام ادارة الوصولات والتوصيل — الإصدار 1.0</p></div>`)},
+async statement(){const l=(await api('receipts?status=delivered')).concat(await api('receipts?archived=1').then(a=>a.filter(x=>x.status==='delivered')));return shell('كشف حساب',tbl(l),1)},
+async returns(){const l=await api('receipts?status=rejected');return shell('كشف مرتجعات',tbl(l),1)}};
+async function dash(){const d=await api('stats');const T=(l,v)=>`<div class="st">${l}<b>${v}</b></div>`;
+ return shell('لوحة التحكم',`<div class="g">${T('الوصولات',d.orders)}${T('بانتظار التأكيد',d.unconfirmed)}${T('اجمالي المبالغ المسلمة',n(d.total))}${T('اجور التوصيل',n(d.fee))}${T('الصافي',n(d.net))}${T('السندات',n(d.vouchers))}${T('العملاء',d.clients)}${T('السواق',d.drivers)}</div>
+ <div class="card"><h3>الوصولات خلال 7 أيام</h3><div class="col">${d.days.map(x=>`<div><i style="height:${x[1]*22}px"></i>${x[0]}<br>${x[1]}</div>`).join('')}</div></div>
+ <div class="card"><h3>حسب الحالة</h3>${bars(Object.entries(d.by).map(([k,v])=>[ST[k],v]))}</div>
+ <div class="card"><h3>أكثر المحافظات</h3>${bars(d.gov)}</div><div class="card"><h3>أفضل العملاء (مبالغ مسلمة)</h3>${bars(d.clients_top)}</div><div class="card"><h3>أفضل السواق (تسليمات)</h3>${bars(d.drivers_top)}</div>
+ <button class="btn" onclick="go('orders')">ادارة الوصولات</button>`)}
+V.orders=async()=>{const q=new URLSearchParams(location.hash.split('?')[1]||''),st=q.get('s')||'',k=q.get('q')||'';const l=await api('receipts?'+(st?'status='+st+'&':'')+'q='+encodeURIComponent(k));
+ return shell('كل الوصولات',`<div class="pad" style="margin-top:12px"><select class="sel" onchange="go('orders?s='+this.value)"><option value="">كل الحالات</option>${Object.keys(ST).map(x=>`<option value="${x}" ${x===st?'selected':''}>${ST[x]}</option>`)}</select><input class="sel" id="oq" value="${k}" placeholder="بحث" onchange="go('orders?s=${st}&q='+this.value)"><button class="btn s" onclick="go('add')">+ وصل</button></div>
+ <div class="tw"><table><tr><th>الوصل</th><th>الزبون</th><th>المحافظة</th><th>المبلغ</th><th>الحالة</th><th></th></tr>${l.map(r=>`<tr><td>${r.no}</td><td>${r.name}</td><td>${r.gov}</td><td>${n(r.total)}</td><td>${ST[r.status]}</td><td style="white-space:nowrap"><a onclick="go('r/${r.id}')" style="cursor:pointer">عرض</a> | <a onclick="editR(${r.id},${r.total},${r.fee})" style="cursor:pointer">تعديل</a> | <a onclick="delR(${r.id})" style="color:red;cursor:pointer">حذف</a></td></tr>`).join('')}</table></div>${l.length?'':'<div class="empty" style="margin-top:10vh">لا توجد نتائج</div>'}`)};
+window.delR=wrap(async id=>{if(confirm('حذف الوصل نهائيا؟')){await api('receipts/'+id,'DELETE');render()}});
+window.editR=wrap(async(id,t,f)=>{const a=prompt('المبلغ الكلي',t);if(a===null)return;const b=prompt('اجرة التوصيل',f);if(b===null)return;await api('receipts/'+id,'PUT',{total:a,fee:b});render()});
+window.editU=wrap(async(id,nm)=>{const a=prompt('الاسم',nm);if(a===null)return;const p=prompt('كلمة مرور جديدة (اتركها فارغة بدون تغيير)');await api('users/'+id,'PUT',{name:a,password:p||undefined});render()});
+window.delV=wrap(async id=>{if(confirm('حذف السند؟')){await api('vouchers/'+id,'DELETE');render()}});
+window.demo=wrap(async r=>{const x=await api('demo','POST',{role:r});S.tok=localStorage.t=x.token;S.user=x.user;localStorage.u=JSON.stringify(x.user);S.co=x.company;go('')});
+const tbl=l=>l.length?`<div class="tw"><table><tr><th>الوصل</th><th>التاريخ</th><th>المبلغ</th><th>الأجرة</th><th>الصافي</th></tr>${l.map(r=>`<tr><td>${r.no}</td><td>${r.date}</td><td>${n(r.total)}</td><td>${n(r.fee)}</td><td>${n(r.total-r.fee)}</td></tr>`).join('')}<tr><th>المجموع</th><th></th><th>${n(l.reduce((a,r)=>a+r.total,0))}</th><th>${n(l.reduce((a,r)=>a+r.fee,0))}</th><th>${n(l.reduce((a,r)=>a+r.total-r.fee,0))}</th></tr></table></div>`:'<div class="empty">لا توجد بيانات</div>';
+const g=i=>$('#'+i).value,E=m=>$('#e').textContent=m;
+function wrap(f){return async(...a)=>{try{await f(...a)}catch(e){$('#e')?E(e):alert(e)}}}
+window.doSearch=wrap(async()=>{const l=await api('receipts?q='+encodeURIComponent(g('q')));$('#res').innerHTML=l.length?l.map(card).join(''):'<div class="empty" style="margin-top:60px">لا توجد نتائج</div>'});
+window.addR=wrap(async()=>{const b={};['no','name','phone','gov','area','goods','qty','total','fee','notes'].forEach(k=>b[k]=g('f_'+k));await api('receipts','POST',b);alert('تمت اضافة الوصل');go('pending'.replace('pending',S.user.role==='client'?'pending':'list'))});
+window.setS=wrap(async id=>{await api(`receipts/${id}/status`,'POST',{status:g('ns'),driverId:$('#dr')?g('dr'):'',notes:g('nn')});render()});
+window.arch=wrap(async id=>{await api(`receipts/${id}/archive`,'POST');go('archive')});
+window.addV=wrap(async()=>{await api('vouchers','POST',{userId:g('vu'),amount:g('va'),note:g('vn')});render()});
+window.addU=wrap(async()=>{await api('users','POST',{name:g('un'),username:g('uu'),password:g('up'),phone:g('uh'),role:$('#ur')?g('ur'):'driver'});render()});
+window.delU=wrap(async id=>{if(confirm('حذف المستخدم؟')){await api('users/'+id,'DELETE');render()}});
+window.chPw=wrap(async()=>{await api('password','POST',{old:g('po'),pass:g('pn')});alert('تم التغيير')});
+window.saveCo=wrap(async()=>{S.co=await api('company','POST',{name:g('cn'),en:g('ce')});alert('تم الحفظ')});
+function loginView(){document.body.className=S.tab==='client'?'client':'';return `<div class="logo">${S.co.en}</div><div class="seg"><button class="${S.tab==='client'?'on':''}" onclick="S.tab='client';render()">زبون</button><button class="${S.tab==='user'?'on':''}" onclick="S.tab='user';render()">مستخدم</button></div>
+<div class="box">${S.tab==='user'?`<input id="lu" placeholder="اسم المستخدم" autocomplete="username"><input id="lp" type="password" placeholder="كلمة المرور" autocomplete="current-password">`:`<input id="tp" placeholder="رقم الهاتف" inputmode="tel"><input id="tn" placeholder="رقم الوصل">`}</div><div class="err" id="e"></div>
+<button class="btn" onclick="${S.tab==='user'?'login()':'track()'}">${S.tab==='user'?'تسجيل دخول':'بحث'}</button><div id="res"></div><div class="demo"><small>دخول تجريبي سريع</small>${[['admin','المدير'],['rep','المندوب'],['driver','السائق'],['client','العميل']].map(x=>`<button onclick="demo('${x[0]}')">${x[1]}</button>`).join('')}</div>${S.tab==='user'?'<button class="btn s" style="display:block;margin:auto;background:#fff2" onclick="go(\'about\')">حول</button>':''}`}
+window.login=wrap(async()=>{const r=await api('login','POST',{username:g('lu'),password:g('lp')});S.tok=localStorage.t=r.token;S.user=r.user;localStorage.u=JSON.stringify(r.user);S.co=r.company;go('')});
+window.track=wrap(async()=>{const r=await api('track','POST',{phone:g('tp'),no:g('tn')});$('#res').innerHTML=`<div class="rc s-${r.status}"><div>رقم الوصل : ${r.no}</div><div>الحالة : <b>${ST[r.status]}</b></div><div>المحافظة : ${r.gov}</div><div>السائق : ${r.driver||'—'}</div><div>اخر تحديث : ${r.updated}</div></div>`});
+async function render(){const h=location.hash.slice(1).split('?')[0];
+ if(!S.user){$('#app').innerHTML=loginView();return}
+ document.body.className=S.user.role==='client'?'client':'';
+ try{const[p,a]=h.split('/');if(!V[p])throw'';$('#app').innerHTML=await V[p](a)}catch(e){$('#app').innerHTML=shell('خطأ','<div class="empty">'+(e||'الصفحة غير موجودة')+'</div>')}}
+window.onhashchange=render;fetch('/api/company').then(r=>r.json()).then(c=>{S.co=c;if(!S.user)render()});render();
+</script></body></html>
